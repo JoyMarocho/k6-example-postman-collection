@@ -4,7 +4,7 @@ This repository contains an exported Postman collection and its converted k6 scr
 
 ## K6 - Load Testing Our Test API with The Postman Collection
 **1. Optional: Clone the repository and skip to the step 5:**
-        - `git clone https://github.com/JoyMarocho/k6-example-postman-collection.git`
+        `git clone https://github.com/JoyMarocho/k6-example-postman-collection.git`
 
 **2. Install Node.js (if you haven't already done so), For Windows Users Follow the steps in the link shared**
         - [https://www.geeksforgeeks.org/how-to-install-and-use-nvm-on-windows/](#Windows-Users)
