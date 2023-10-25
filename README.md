@@ -13,7 +13,24 @@ This repository contains an exported Postman collection and its converted k6 scr
 
 **3. Install the postman-to-k6 tool:**
 - The postman-to-k6 tool is developed to help you convert the requests inside your Postman collections to k6 scripts, which are actually JavaScript code.
-        `npm install -g @apideck/postman-to-k6`
+        ```shell
+        $ npm install -D @apideck/postman-to-k6
+        ```
+
+        or using yarn...
+
+        ```shell
+        $ yarn add @apideck/postman-to-k6
+        ```
+
+Note that this will require you to run the converter with `npx @apideck/postman-to-k6 your-postman-file` or, if you are
+using an older versions of npm, `./node_modules/.bin/postman-to-k6 your-postman-file`.
+
+### Global Installation
+
+        ```shell
+        $ npm install -g @apideck/postman-to-k6
+        ```
 
 - If you encounter any issues run this command then repeat the above command.
         `npm config set strict-ssl false`
@@ -25,4 +42,12 @@ This repository contains an exported Postman collection and its converted k6 scr
 **4. Convert your exported Postman collection to k6 script:**
 - Assuming your exported collection is named `test-api.json`, you can run this command to convert it to a k6 script. The `env.json` includes 
 all your environment variables that are exported from Postman.
-        `postman-to-k6 test-api.json -e env.json -o k6-script.js`
+        ```shell
+        $ postman-to-k6 collection.json -o k6-script.js
+        ```
+
+Then run the script in k6, as usual, using:
+
+        ```shell
+        $ k6 run k6-script.js
+        ```

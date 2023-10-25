@@ -10,7 +10,7 @@ import {
 export let options = {
   maxRedirects: 4,
   duration: "1m",
-  vus: 100
+  vus: 1
 };
 
 const Request = Symbol.for("request");
